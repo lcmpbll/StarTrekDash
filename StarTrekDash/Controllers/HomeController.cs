@@ -27,8 +27,8 @@ namespace StarTrekDash.Controllers
             var allArticles = Article.GetArticles();
             ViewBag.Time = StarDate.get_Time();
             ViewBag.StarDate = StarDate.get_StarDate();
-            
-            ViewBag.Weather = Weather.get_Weather();
+            ViewBag.DayOfWeek = StarDate.get_DayOfWeek();
+            ViewBag.temp= Weather.get_Weather();
             return View(allArticles);
         }
 

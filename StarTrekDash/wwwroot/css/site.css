@@ -2289,12 +2289,22 @@ footer::after {
 /* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
 /* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
 @keyframes tickerh {
-  0% { transform: translate3d(0, 100%, 0); }
-  100% { transform: translate3d(0, -400%, 0); }
+  0% { transform: translate3d(100%, 0, 0); }
+  100% { transform: translate3d(-200%, 0, 0); }
 }
-.hmove { animation: tickerh linear 35s infinite; }
+.hmove { animation: tickerh linear 20s infinite; }
 .hmove:hover { animation-play-state: paused; }
 
+@keyframes tickerb {
+  0% {
+		 transform: translate3d(0, 60%, 0); }
+  100% {
+		transform: translate3d(0, -60%, 0); }
+}
+.bmove { 
+	animation: tickerb linear 30s infinite;
+}
+.bmove:hover {animation-play-state: paused;}
 
 #mini-star-logo {
 	width: 80px;
@@ -2307,7 +2317,7 @@ footer::after {
 
 body {
 	animation: glitch 1s;
-	animation-delay: 10s;
+	animation-delay: 20s;
 }
 
 

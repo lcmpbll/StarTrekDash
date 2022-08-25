@@ -13,8 +13,6 @@ namespace StarTrekDash.Models
     // public string state_code { get; set; }
     // public string wind_cdir {get; set;}
     // public 
-
-    
     public static List<Weather> get_Weather()
     {
       var apiCallTask = ApiHelper.GetAllWeather();
@@ -31,5 +29,5 @@ namespace StarTrekDash.Models
       return WeatherInfo;
     }
   }
-  
 }
+

@@ -29,6 +29,7 @@
         <a id="scroll-top" href=""><span class="hop">screen</span> top</a>
       </div>
       <div class="left-frame-top">
+        <img src="~/img/map.jpg" width="100%">
         <div class="panel-2">S t a r d a t e _    </div>
         <!-- <div class="panel-2">02<span class="hop">-262000</span></div> -->
         @* <div class="panel-2">Stardate: </div> *@
@@ -41,11 +42,10 @@
                 <div class="row-1">
                     <div class="hwrap">
                         <div class="hmove">
+                            <div class="hitem"><h2>@ViewBag.DayOfWeek</h2></div>
                             <div class="hitem">Good luck to SF Academy team at the Parrises Squares championship!</div>
-                            <div class="hitem">Ship is crashing. Bummer.</div>
+                            <div class="hitem">Star Fleet Academy sign ups this Friday!</div>
                             <div class="hitem">Approaching asteroid field. Buckle up.</div>
-                            <div class="hitem">Half-off pizza in the employee lounge.</div>
-                            <div class="hitem">Happy birthday to Glaxnar!</div>
                         </div>
                     </div>
                 </div>
@@ -82,16 +82,17 @@
           <div class="panel-3"><p>@ViewBag.Time</p><span class="hop"></span></div>
           <div class="panel-4">
           E a r t h T e m p :
-          @foreach(Weather weather in ViewBag.Weather)
+          San Francisco, CA
+        @foreach(Weather weather in ViewBag.temp)
             {
               @weather.temp
             }
-<span class="hop"></span> degrees Celsius</div>
+<span class="hop"></span> °C</div>
           <div class="panel-5"><span class="hop"></span></div>
-          <!-- <div class="panel-6">06<span class="hop">-071984</span></div> -->
-          <!-- <div class="panel-7">07<span class="hop">-081940</span></div>
+       <div class="panel-6">06<span class="hop">-071984</span></div>
+          <div class="panel-7">07<span class="hop">-081940</span></div>
           <div class="panel-8">08<span class="hop">-47148</span></div>
-          <div class="panel-9">09<span class="hop">-081966</span></div> -->
+          <div class="panel-9">09<span class="hop">-081966</span></div> 
         </div>
         <div>
           <div class="panel-10"><span class="hop"></span></div>
@@ -117,18 +118,16 @@
                       <p><div class="text-center">
 </div>
 <div class="container">
+<img src="~/img/enterprise.png" width=90% textalign="center">
 
-@* <h4>@ViewBag.StarDate</h4> *@
-
-
-<h5> E A R T H  N E W S </h5>
+<h1> E A R T H  N E W S </h1>
 <br>
 <div class="data-cascade-button-group">
           <div class="cascade-wrapper">
             <div class="data-cascade">
                 <div class="row-1">
                     <div class="hwrap1">
-                        <div class="hmove">
+                        <div class="bmove">
                             @foreach(Article article in Model)
 {
     <p>@article.Title <em>@article.Abstract</em></p>
@@ -140,10 +139,7 @@
             </div>
           </div>
 
-@* @foreach(Article article in Model)
-{
-    <p>@article.Title <em>@article.Abstract</em></p>
-} *@
+
 </div></p>
                 <!-- 
                   <p>

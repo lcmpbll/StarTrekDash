@@ -11,15 +11,19 @@ namespace StarTrekDash.Models
   public static string get_Time()
 	{
     string time = new (DateTime.Now.ToString("HH:mm:ss"));
-		return "E a r t h T i m e : " + time;
+		return "E a r t h T i m e _ " + time;
 	}
 	public static string get_StarDate()
 	{
 		string date = new (DateTime.Today.ToString("MM-dd-yyyy"));
-
+		return date;
 		//math for star date
+	}
+	public static string get_DayOfWeek()
+	{
 		string dayOfWeek = new (DateTime.Today.DayOfWeek.ToString());
-		return dayOfWeek + "            " + date;
+		return dayOfWeek;
+	}
 		// string resultString = Regex.Match(date, @"\d+").Value;
 		// var datenum = Int32.Parse(resultString);
 		// return datenum;
@@ -28,7 +32,7 @@ namespace StarTrekDash.Models
 	}
 
 	}
-	}
+	
 
 	
   

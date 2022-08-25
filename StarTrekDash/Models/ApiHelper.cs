@@ -29,8 +29,8 @@ namespace StarTrekDash.Models
       // IRestResponse response = await client.ExecuteTaskAsync(request);
 
       var client = new RestClient("https://weatherbit-v1-mashape.p.rapidapi.com");
-      var request = new RestRequest("/current?lat=45.5&lon=-122.7", Method.GET);
-      request.AddHeader("X-RapidAPI-Key", "37c0a1d315msh14263c82d6398edp1fbb3djsn6522c5e5acfc");
+      var request = new RestRequest("/current?lat=37.8&lon=-122.4", Method.GET);
+      request.AddHeader("X-RapidAPI-Key", "08865bee04msh17e6a2c6cac849fp142897jsncdc0a5c75998");
       request.AddHeader("X-RapidAPI-Host", "weatherbit-v1-mashape.p.rapidapi.com");
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
