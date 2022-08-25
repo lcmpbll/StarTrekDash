@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using StarTrekDash.Models
+@model List<StarTrekDash.Models.Article>
+
+
+@* @{
+    ViewData["Title"] = "Home Page";
+} *@
+
+@{
+  Layout = "_Layout";
+}
+
+<!-- ADD GLOBAL ANIMATION THAT ADDS AND REMOVES ITALICS EFFECT TO ALL TEXT AT RANDOM INTERVALS -->
+
+<div class="text-center">
+    <h1 class="display-4">St<span><img src="~/img/1.jpg" alt="" id="mini-star-logo"></span>rDash</h1>
+</div>
+
+<div id="warning-alert">
+
+</div>
+
+<div class="wrap">
+      <div class="scroll-top">
+        <a id="scroll-top" href=""><span class="hop">screen</span> top</a>
+      </div>
+      <div class="left-frame-top">
+        <div class="panel-2">S t a r d a t e _    </div>
+        <!-- <div class="panel-2">02<span class="hop">-262000</span></div> -->
+        @* <div class="panel-2">Stardate: </div> *@
+      </div>
+      <div class="right-frame-top">
+        @* <div class="banner">LCARS &#149; Online lol omg</div> *@
+        <div class="data-cascade-button-group">
+          <div class="cascade-wrapper">
+            <div class="data-cascade">
+                <div class="row-1">
+                    <div class="hwrap">
+                        <div class="hmove">
+                            <div class="hitem">Good luck to SF Academy team at the Parrises Squares championship!</div>
+                            <div class="hitem">Ship is crashing. Bummer.</div>
+                            <div class="hitem">Approaching asteroid field. Buckle up.</div>
+                            <div class="hitem">Half-off pizza in the employee lounge.</div>
+                            <div class="hitem">Happy birthday to Glaxnar!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- /cascade-wrapper -->
+          @* <div class="button-col">
+            <div class="button" id="top-left"><a href="">Justin</a></div>
+            <div class="button" id="bottom-left"><a href="">Likes</a></div>
+          </div>
+          <div class="button-col">
+            <div class="button" id="top-right"><a href="">Fondue</a></div>
+            <div class="button" id="bottom-right"><a href="">A lot</a></div>
+          </div> *@
+        </div>
+        <!-- /data-cascade-button-group -->
+        <div class="top-corner-bg">
+          <div class="top-corner"></div>
+        </div>
+        <div class="bar-panel">
+          <div class="bar-1"></div>
+          <div class="bar-2"></div>
+          <div class="bar-3"></div>
+          <div class="bar-4"></div>
+          <div class="bar-5"></div>
+        </div>
+      </div>
+      <!-- /left-frame-top -->
+    </div>
+    <!-- /wrap -->
+    <div class="wrap" id="gap">
+      <div class="left-frame">
+        <div>
+          <div class="panel-3"><p>@ViewBag.Time</p><span class="hop"></span></div>
+          <div class="panel-4">
+          E a r t h T e m p :
+          @foreach(Weather weather in ViewBag.Weather)
+            {
+              @weather.temp
+            }
+<span class="hop"></span> degrees Celsius</div>
+          <div class="panel-5"><span class="hop"></span></div>
+          <!-- <div class="panel-6">06<span class="hop">-071984</span></div> -->
+          <!-- <div class="panel-7">07<span class="hop">-081940</span></div>
+          <div class="panel-8">08<span class="hop">-47148</span></div>
+          <div class="panel-9">09<span class="hop">-081966</span></div> -->
+        </div>
+        <div>
+          <div class="panel-10"><span class="hop"></span></div>
+        </div>
+      </div>
+      <div class="right-frame">
+        <div class="bar-panel">
+          <div class="bar-6"></div>
+          <div class="bar-7"></div>
+          <div class="bar-8"></div>
+          <div class="bar-9"></div>
+          <div class="bar-10"></div>
+        </div>
+        <div class="corner-bg">
+          <div class="corner"></div>
+        </div>
+        <div class="content">
+       
+
+          <footer>
+            <div class="footer-inside">
+              <div class="footer-text">
+                      <p><div class="text-center">
+</div>
+<div class="container">
+
+@* <h4>@ViewBag.StarDate</h4> *@
+
+
+<h5> E A R T H  N E W S </h5>
+<br>
+<div class="data-cascade-button-group">
+          <div class="cascade-wrapper">
+            <div class="data-cascade">
+                <div class="row-1">
+                    <div class="hwrap1">
+                        <div class="hmove">
+                            @foreach(Article article in Model)
+{
+    <p>@article.Title <em>@article.Abstract</em></p>
+    <br>
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+@* @foreach(Article article in Model)
+{
+    <p>@article.Title <em>@article.Abstract</em></p>
+} *@
+</div></p>
+                <!-- 
+                  <p>
+                  Your copyright information is only a suggestion. You can also choose to delete this paragraph. But please keep my information as required by the EULA.
+                  Content Copyright &#169; Team Week 2 Team
+                </p>
+                <p>
+                  LCARS Inspired Website Template designed &amp; developed by
+                  Jim Robertus
+                  <a href="https://www.thelcars.com">www.TheLCARS.com</a>. -->
+                @* </p> *@
+              </div>
+            </div>
+          
+            <div class="footer-panel"><span class="hop"></span></div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="lcars.js"></script>
