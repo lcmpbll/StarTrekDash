@@ -4,7 +4,9 @@
 
 
 
-#### _A C# based Star Trek Dashboard_
+## _A C# based Star Trek Dashboard_
+
+![A pic of the app in action.](appPic2.png)
 
 ## Table of Contents
 
@@ -37,7 +39,7 @@ _This is a Star Trek Themed Dashboard. Povides weather data for Portland, OR, gr
 <details>
 <summary><strong>Initial Setup</strong></summary>
 <ol>
-<li>Copy the git repository url: https://github.com/carolinecerussi/StarTrek_Dashboard
+<li>Copy the git repository url: https://github.com/lcmpbll/StarTrekDash
 <li>Open a shell program and navigate to your desktop.
 <li>Clone the repository for this project using the "git clone" command and including the copied URL.
 <li>While still in the shell program, navigate to the root directory of the newly created file named "StarTrek_Dashboard".
@@ -90,4 +92,4 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 ## License
 
 
-[Copyright](/LICENSE) (c) _08-21-2022_ _Ashe Urban Caroline Cerussi Claire Thorington Kyle Chinnick Justin Peters Liam Campbell_
+[Copyright](LICENSE) (c) _08-21-2022_ _Ashe Urban Caroline Cerussi Claire Thorington Kyle Chinnick Justin Peters Liam Campbell_
